@@ -18,8 +18,6 @@ import java.io.FileReader;
 import java.util.*;
 
 public class Solution {
-
-
     /**************** Word Anagram ****************/
     static Trie dict = new Trie();
     static ArrayList<String> possibleWords = new ArrayList<>();
@@ -79,15 +77,14 @@ public class Solution {
         } catch (Exception e) {
             System.out.println(e);
         }
-
-        System.out.println(dict.search("mg"));
+//        System.out.println(dict.search("mg"));
 
         /************ test ************/
         List<Character> chars = new ArrayList<>();
         chars.add('e');
-//        chars.add('b');
-//        chars.add('a');
-//        chars.add('o');
+        chars.add('b');
+        chars.add('a');
+        chars.add('o');
         chars.add('g');
         chars.add('m');
         chars.add('l');
@@ -117,7 +114,6 @@ class Trie {
     public Trie() {
         root = new TrieNode();
     }
-
 
     public void insert(String word) {
         if(search(word) == true) return;
